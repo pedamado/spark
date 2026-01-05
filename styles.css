@@ -1,0 +1,1041 @@
+/* 9.º EI_EA – 9.º Encontro Internacional sobre Educação Artística */
+/* Pedro Amado – FBAUP / i2ADS, Inês Salgado – FBAUP (LDC), & ChatGPT, June, 2025 */
+
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Labrada:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "Mont Bold";
+  src: url(../fonts/Mont_FF-Bold.woff2);
+}
+
+@font-face {
+  font-family: "Mont SemiBold";
+  src: url(../fonts/Mont_FF-SemiBold.woff2);
+}
+
+@font-face {
+  font-family: "Mont Regular";
+  src: url(../fonts/Mont_FF-Regular.woff2);
+}
+
+@font-face {
+  font-family: "Mont Light";
+  src: url(../fonts/Mont_FF-Light.woff2);
+}
+
+/* Root Variables */
+:root {
+  --color-black: #000;
+
+  --color-red: #c82314;
+  --color-yellow: #f3c400;
+
+  --color-eiea: #c72727;
+  --color-fpceup: #e5622e;
+  --color-esmae: #45a8bf;
+  --color-fbaup: #cbce3a;
+  --color-rosa: #eb6a91;
+  --color-verde: #5da549;
+  --color-gray-light: #f4f4f4;
+  --color-white: #fff;
+  --color-white: #fff;
+  --color-blue: #45a8bf;
+  --color-organge: #e4622e;
+  --color-dark-gray: #444;
+  --font-base: "Mont Regular", "Poppins", sans-serif;
+  --font-bold: "Mont Bold", "Poppins", sans-serif;
+  --font-semibold: "Mont SemiBold", "Poppins", sans-serif;
+  --font-light: "Mont Light", "Poppins", sans-serif;
+
+  --font-size-base: 1rem;
+  --font-size-small: 0.7rem;
+  --font-size-large: 1.25rem;
+  --font-size-xlarge: 1.5rem;
+  --font-size-xxlarge: 2.25rem;
+  --font-size-xxxlarge: 3.5rem;
+  --line-height-base: 1.5rem;
+}
+
+/* Reset and Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-base);
+  font-size: var(--font-size-base);
+  background: var(--color-white);
+  color: var(--color-black);
+  line-height: var(--line-height-base);
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 1rem;
+  line-height: 1.35rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-bold);
+}
+
+h2 {
+  font-size: 0.85rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+a {
+  color: var(--color-rosa);
+}
+main#program,
+header {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  cursor: url(menu.svg) 16 16, auto;
+}
+
+header {
+  img:nth-child(1) {
+    height: 100px;
+    margin: 15px 3px;
+  }
+
+  img:nth-child(2) {
+    height: 70px;
+    margin: 15px 3px;
+    padding-left: clamp(80vw, 0);
+    left: 100vw;
+  }
+}
+
+/* Navigation Tabs */
+#day-tabs {
+  font-family: var(--font-base);
+  display: flex;
+  overflow-x: auto;
+  /* gap: 0.5rem; */
+  margin-bottom: 1rem;
+  /* border-bottom: 2px solid var(--color-eiea); */
+  position: sticky;
+  top: 0;
+  background-color: var(--color-white);
+  z-index: 999999;
+}
+
+.tab-button {
+  font-family: var(--font-base);
+  font-size: var(--font-size-base);
+  padding: 0.75rem 1rem;
+  background: var(--color-gray-light);
+  border: none;
+
+  border-right: var(--color-white) 1px solid;
+  /* border-radius: 0.25rem; */
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  flex: 1 1 0;
+  min-width: 80px;
+  /* margin: 0px 5px; */
+}
+
+.tab-button:last-child {
+  border-right: none;
+  min-width: 160px;
+}
+
+.tab-button.active {
+  background: var(--color-eiea);
+  color: var(--color-white);
+  font-style: var(--font-bold);
+}
+
+.tab-button:nth-of-type(1).active {
+  background: var(--color-rosa);
+  color: var(--color-white);
+}
+
+.tab-button:nth-of-type(2).active {
+  background: var(--color-fpceup);
+  color: var(--color-white);
+}
+
+.tab-button:nth-of-type(3).active {
+  background: var(--color-esmae);
+  color: var(--color-white);
+}
+
+.tab-button:nth-of-type(4).active {
+  background: var(--color-fbaup);
+  color: var(--color-white);
+}
+
+.tab-button:nth-of-type(1):hover {
+  background: var(--color-rosa);
+  color: var(--color-white);
+}
+
+.tab-button:nth-of-type(2):hover {
+  background: var(--color-fpceup);
+  color: var(--color-white);
+}
+
+.tab-button:nth-of-type(3):hover {
+  background: var(--color-esmae);
+  color: var(--color-white);
+}
+
+.tab-button:nth-of-type(4):hover {
+  background: var(--color-fbaup);
+  color: var(--color-white);
+  font-family: var(--font-bold);
+}
+
+.tab-button:last-child:hover {
+  background: var(--color-eiea);
+  color: var(--color-white);
+}
+
+/* Day Section */
+.day {
+  margin-bottom: 2rem;
+}
+
+.venue header {
+  line-height: 1rem;
+}
+
+/* Venue Block */
+.venue {
+  /* margin-bottom: 2rem; */
+  background: var(--color-gray-light);
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-left: 4px solid var(--color-eiea);
+  /* border-bottom: 1px solid #666; */
+  /* margin-top: 15px; */
+}
+
+.venue-header h2 {
+  font-size: var(--font-size-large);
+  margin-bottom: 0.5rem;
+}
+
+/* .venue-header p {
+  font-size: 1rem;
+  margin-right: 50px;
+  color: #dd526a;
+  /* margin-bottom: 0.25rem; 
+} */
+
+/* Sessions */
+.sessions {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  /* padding-top: 1rem; */
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.session {
+  background: var(--color-white);
+  padding: 0 1.5rem;
+  flex: 0 0 25%;
+  width: calc(100% - 3rem);
+  min-width: 250px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 1rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.session h1.session-title {
+  padding-right: 32px;
+}
+
+#venue-38 .session:nth-of-type(1),
+#venue-80 .session:nth-of-type(1),
+#venue-81 .session:nth-of-type(1),
+#venue-82 .session:nth-of-type(1),
+#venue-85 .session:nth-of-type(1),
+#venue-86 .session:nth-of-type(1),
+#venue-89 .session:nth-of-type(1),
+#venue-90 .session:nth-of-type(1),
+#venue-91 .session:nth-of-type(1),
+#venue-116 .session:nth-of-type(1),
+#venue-117 .session:nth-of-type(1),
+#venue-118 .session:nth-of-type(1),
+#venue-122 .session:nth-of-type(1),
+#venue-123 .session:nth-of-type(1),
+#venue-124 .session:nth-of-type(1),
+#venue-127 .session:nth-of-type(1),
+#venue-128 .session:nth-of-type(1),
+#venue-129 .session:nth-of-type(1),
+#venue-130 .session:nth-of-type(1),
+#venue-133 .session:nth-of-type(1),
+#venue-137 .session:nth-of-type(1),
+#venue-140 .session:nth-of-type(1),
+#venue-144 .session:nth-of-type(1),
+#venue-149 .session:nth-of-type(1),
+#venue-150 .session:nth-of-type(1),
+#venue-151 .session:nth-of-type(1),
+#venue-153 .session:nth-of-type(1) {
+  max-width: calc(100% - 1rem);
+}
+
+.session:last-child {
+  padding-bottom: 10px;
+}
+
+.session:hover {
+  box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.253);
+}
+
+.venue-break .session:hover,
+.venue-info .session:hover,
+.venue-title .session:hover {
+  box-shadow: none;
+}
+
+.sessions > article > .session-type {
+  margin-top: -2rem;
+  position: absolute;
+  bottom: 0rem;
+  font-style: normal;
+  text-transform: capitalize;
+}
+
+#venue-40,
+#venue-58,
+#venue-73,
+#venue-88,
+#venue-93,
+#venue-108,
+#venue-121,
+#venue-126,
+#venue-132 {
+  .session-type {
+    position: relative;
+  }
+}
+
+p.session-type {
+  max-width: 50%;
+  line-height: 0.8rem;
+}
+
+/* Nested styles */
+.session-type {
+  /* position: absolute; */
+  bottom: 0;
+  text-transform: none;
+  font-style: italic;
+  font-size: 0.65rem;
+}
+
+/* Thumbnail */
+.session-thumb {
+  background: var(--color-gray-light);
+  width: 100%;
+  aspect-ratio: 3/2;
+  max-height: 320px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+/* Titles and Text */
+.session h3 {
+  font-size: var(--font-size-large);
+  margin-bottom: 0.5rem;
+}
+
+.session p {
+  /* font-size: 0.95rem; */
+  margin-bottom: 0.25rem;
+}
+
+/* Favorite Button */
+.fav-btn {
+  margin-top: auto;
+  padding: 0.5rem 0.5rem;
+  background: var(--color-eiea);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  /* border-radius: 0.25rem; */
+  position: absolute;
+  top: 0;
+  right: 1em;
+  width: 3em;
+}
+
+.fav-btn:hover {
+  background: var(--color-eiea);
+  color: var(--color-white);
+}
+
+/* Empty Favorites Message */
+.empty-favorites {
+  text-align: left;
+  padding: 2rem;
+  font-style: italic;
+  color: var(--color-dark-gray);
+}
+
+/* Media Queries */
+@media (min-width: 600px) {
+  .header {
+    img:nth-child(2) {
+      height: 70px;
+      margin: 15px 3px;
+      margin-left: 50%;
+      display: inline-flex;
+    }
+  }
+
+  .session {
+    min-width: 300px;
+  }
+
+  .venue-header h2 {
+    font-size: var(--font-size-xlarge);
+  }
+
+  .venue-header p {
+    font-size: var(--font-size-base);
+  }
+
+  #venue-38 .session:nth-of-type(1),
+  #venue-80 .session:nth-of-type(1),
+  #venue-81 .session:nth-of-type(1),
+  #venue-82 .session:nth-of-type(1),
+  #venue-85 .session:nth-of-type(1),
+  #venue-86 .session:nth-of-type(1),
+  #venue-89 .session:nth-of-type(1),
+  #venue-90 .session:nth-of-type(1),
+  #venue-91 .session:nth-of-type(1),
+  #venue-116 .session:nth-of-type(1),
+  #venue-117 .session:nth-of-type(1),
+  #venue-118 .session:nth-of-type(1),
+  #venue-122 .session:nth-of-type(1),
+  #venue-123 .session:nth-of-type(1),
+  #venue-124 .session:nth-of-type(1),
+  #venue-127 .session:nth-of-type(1),
+  #venue-128 .session:nth-of-type(1),
+  #venue-129 .session:nth-of-type(1),
+  #venue-130 .session:nth-of-type(1),
+  #venue-133 .session:nth-of-type(1),
+  #venue-137 .session:nth-of-type(1),
+  #venue-140 .session:nth-of-type(1),
+  #venue-144 .session:nth-of-type(1),
+  #venue-150 .session:nth-of-type(1),
+  #venue-151 .session:nth-of-type(1),
+  #venue-153 .session:nth-of-type(1) {
+    /* max-width: 60%; */
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    img:nth-child(2) {
+      height: 70px;
+      margin: 15px 3px;
+      margin-left: 70%;
+      display: inline-flex;
+    }
+  }
+  body {
+    /* font-size: 1.375rem; 22px */
+  }
+
+  .tab-button {
+    font-size: 1rem;
+  }
+
+  .session {
+    /* padding: 1.5rem; */
+  }
+}
+
+/* Hacks to display section headers */
+
+.session-author {
+  /* font-size: 1rem; */
+  font-weight: 400;
+}
+
+.session-author-tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: var(--font-semibold);
+  color: var(--color-dark-gray);
+}
+
+/* fazer a todas as sections que forem apenas informativas/placeholders como as que estão marcadas como info e break*/
+section #venue-2 {
+  color: var(--color-eiea);
+  background: none;
+  border: none;
+  margin: none;
+  padding: none;
+
+  /* nested elements */
+  header,
+  img,
+  p,
+  button {
+    display: none;
+  }
+
+  article {
+    border: none;
+    padding: none;
+    margin: none;
+  }
+}
+
+/* specific sections are marked as info, break, etc. and can be easily configured using this class */
+section .venue-info,
+.venue-break,
+.venue-title {
+  background: none;
+  border: none;
+  margin: none;
+  padding: none;
+
+  img,
+  button,
+  .sessiontype-tag {
+    display: none;
+  }
+
+  .session-type {
+    color: var(--color-eiea);
+    text-transform: none;
+    font-style: italic;
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    /* padding-top: 0 !important; */
+  }
+
+  p.session-type {
+    max-width: 100%;
+    line-height: 1rem;
+  }
+
+  .venue-title {
+    display: none;
+  }
+
+  article {
+    border: none;
+    padding: none;
+    margin: none;
+  }
+
+  .venue-header {
+    strong,
+    .venue-duration-tag {
+      display: none;
+    }
+  }
+}
+
+/* #day-tab:nth-of-type(2) .venue-break .session-type {} */
+
+/* Make the highlights button disapear */
+button[data-tab="highlights"] {
+  /* Your styles here */
+  display: none;
+}
+
+.venue-header {
+  margin-bottom: 10px;
+}
+
+.venue-header p {
+  font-size: 0.85em !important;
+  font-weight: 400;
+  line-height: 1rem;
+
+  a {
+    text-decoration: underline;
+    color: var(--color-eiea);
+  }
+
+  strong {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85em;
+  }
+}
+
+.sessions article {
+  padding-left: 1rem;
+}
+
+.venue-header p:nth-of-type(1) {
+  color: var(--color-eiea);
+  font-size: var(--font-size-large);
+  padding-left: 0rem;
+}
+
+.venue-info .venue-header,
+.venue-break .venue-header,
+.venue-title .venue-header {
+  padding-left: 0rem;
+}
+
+.venue-info .sessions article,
+.venue-break .sessions article,
+.venue-title .sessions article {
+  padding-left: 0rem !important;
+}
+
+.venue-break {
+  .venue-room {
+    display: none;
+  }
+}
+
+.venue-conferencista {
+  background-color: var(--color-eiea);
+  border-left: var(--color-white);
+  color: var(--color-white);
+
+  .session {
+    color: var(--color-black);
+
+    h2 {
+      font-size: 1.25rem;
+    }
+
+    strong {
+      display: none;
+    }
+  }
+}
+
+.venue-conferencista p.venue-title {
+  color: var(--color-white);
+}
+
+.venue-conferencista .sessions {
+  /* max-width: 60%; */
+}
+
+.venue-date-tag {
+  display: none;
+}
+
+.venue-header .venue-title {
+  font-size: var(--font-size-large);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.venue-title {
+  .venue-room {
+    display: none;
+  }
+
+  h1 {
+    text-transform: uppercase;
+  }
+}
+
+.session h2 {
+  margin-bottom: 2rem;
+}
+
+section#venue-2 h1.session-title {
+  /* color: var(--color-black);
+  font-style: normal;
+  font-size: var(--font-size-base);
+  font-weight: 600; */
+
+  font-family: var(--font-base);
+  color: var(--color-eiea);
+  text-transform: none;
+  font-style: italic;
+  font-size: var(--font-size-base);
+  font-weight: 400;
+}
+
+/* POPUP DOM MODLA WINDOWS */
+
+#session-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999999;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+
+  h2 {
+    font-size: 1.35rem;
+    color: var(--color-eiea);
+  }
+}
+
+#session-modal.visible {
+  display: block;
+}
+
+.modal-content {
+  background: #fff;
+  color: #000;
+  max-width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 0;
+  overflow-y: auto;
+  position: relative;
+}
+
+#modal-header {
+  position: sticky;
+  top: 0;
+  padding-top: 1rem;
+  background-color: var(--color-white);
+}
+
+#modal-close {
+  position: fixed;
+  top: 0;
+  right: 2rem;
+  width: 3.25rem;
+  height: 3.25rem;
+  /* border-radius: 15%; */
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--color-black);
+  border: var(--color-black) 1px solid;
+  border-top: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding-bottom: 0.25rem;
+}
+
+#modal-header {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-white);
+  margin-top: 2rem;
+}
+
+#modal-close:hover {
+  background: var(--color-eiea);
+  color: var(--color-white);
+}
+
+#modal-scroll section {
+  margin-bottom: 2rem;
+}
+
+.info-btn {
+  /* // This removes styles added by default to button elements.
+  // For when something should semantically be a button,
+  // but isn't buttony in appearance. */
+  background-color: rgba(255, 255, 255, 0.75);
+  border: none;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  font: inherit;
+  border-radius: 0;
+  appearance: none;
+  /* Just in case we missed anything. */
+
+  border-color: #999;
+  /* background-color: var(--color-gray-light); */
+  border-style: solid;
+  border-width: 1px;
+  border-bottom: none;
+  /* border-radius: 0.75rem; */
+  width: 40%;
+  height: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 1rem;
+
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+  font-size: 0.85rem;
+}
+
+.info-btn:hover {
+  background-color: var(--color-eiea);
+  color: var(--color-white);
+  border-width: 0;
+}
+
+#venue-86,
+#venue-118,
+#venue-85,
+#venue-130,
+#venue-149,
+#venue-82,
+#venue-38 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#venue-150,
+#venue-151,
+#venue-153,
+#venue-116,
+#venue-148,
+#venue-37,
+#venue-152 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  .info-btn {
+    display: none;
+  }
+}
+
+#venue-86,
+#venue-118 {
+  background-color: var(--color-esmae);
+}
+
+#venue-38,
+#venue-82 {
+  background-color: var(--color-fpceup);
+}
+
+#venue-130,
+#venue-149 {
+  background-color: var(--color-fbaup);
+}
+
+#venue-3 .sessions .fav-btn,
+#venue-7 .session .fav-btn,
+#venue-11 .session .fav-btn,
+#venue-14 .session .fav-btn,
+#venue-18 .session .fav-btn,
+#venue-22 .session .fav-btn,
+#venue-26 .session .fav-btn,
+#venue-31 .session .fav-btn {
+  background-color: var(--color-rosa);
+}
+
+#venue-37 .session .fav-btn,
+#venue-41 .sessions .fav-btn,
+#venue-45 .session .fav-btn,
+#venue-49 .session .fav-btn,
+#venue-53 .session .fav-btn,
+#venue-59 .session .fav-btn,
+#venue-62 .session .fav-btn,
+#venue-66 .session .fav-btn,
+#venue-69 .session .fav-btn,
+#venue-74 .session .fav-btn,
+#venue-77 .session .fav-btn,
+#venue-80 .session .fav-btn,
+#venue-81 .session .fav-btn {
+  background-color: var(--color-fpceup);
+}
+
+#venue-85 .session .fav-btn,
+#venue-89 .session .fav-btn,
+#venue-90 .session .fav-btn,
+.session .fav-btn,
+#venue-94 .session .fav-btn,
+#venue-98 .session .fav-btn,
+#venue-101 .session .fav-btn,
+#venue-104 .session .fav-btn,
+#venue-109 .session .fav-btn,
+#venue-113 .session .fav-btn,
+#venue-116 .session .fav-btn,
+#venue-117 .session .fav-btn {
+  background-color: var(--color-esmae);
+}
+
+#venue-122 .session .fav-btn,
+#venue-123 .session .fav-btn,
+#venue-124 .session .fav-btn,
+#venue-127 .session .fav-btn,
+#venue-128 .session .fav-btn,
+#venue-129 .session .fav-btn,
+#venue-133 .session .fav-btn,
+#venue-137 .session .fav-btn,
+#venue-140 .session .fav-btn,
+#venue-144 .session .fav-btn,
+#venue-149.session .fav-btn,
+#venue-151 .session .fav-btn,
+#venue-153 .session .fav-btn,
+#venue-150 .session .fav-btn,
+#venue-152 .session .fav-btn {
+  background-color: var(--color-fbaup);
+  border-left-color: var(--color-fbaup);
+}
+
+#venue-140 {
+  border-left-color: var(--color-fbaup);
+}
+
+/* #venue-149 {
+  .info-btn,
+  p {
+    display: none;
+  }
+} */
+
+.sessions .session {
+  width: 60px;
+}
+
+.zoom-link {
+  color: var(--color-e);
+}
+
+.empty-favorites {
+  font-family: "Labrada", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: italic;
+  font-size: var(--font-size-xxlarge);
+  letter-spacing: 0.025rem;
+  line-height: 1.15em;
+  color: var(--color-dark-gray);
+}
+
+@media (min-width: 600px) {
+  .empty-favorites {
+    font-size: var(--font-size-xxlarge);
+  }
+}
+
+@media (min-width: 1200px) {
+  .empty-favorites {
+    font-size: var(--font-size-xxxlarge);
+    padding: 0 5.5rem;
+  }
+}
+
+.venue-info .session,
+.venue-break .session,
+.venue-title .sessions {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0rem !important;
+}
+
+section.day[data-day="19"] {
+  /* your styles here */
+  .fav-btn {
+    background-color: var(--color-rosa);
+  }
+}
+
+/* Para os favoritos reverterem na cor */
+#venue-3,
+#venue-4,
+#venue-8,
+#venue-15,
+#venue-19,
+#venue-23,
+#venue-27,
+#venue-31 {
+  border-left: 4px solid var(--color-rosa);
+}
+
+section.day[data-day="20"] {
+  /* your styles here */
+  .fav-btn {
+    background-color: var(--color-fpceup);
+  }
+}
+
+#venue-38,
+#venue-41,
+#venue-45,
+#venue-49,
+#venue-53,
+#venue-59,
+#venue-62,
+#venue-66,
+#venue-69,
+#venue-74,
+#venue-77,
+#venue-80,
+#venue-81,
+#venue-82,
+#venue-37 {
+  border-left: 4px solid var(--color-fpceup);
+}
+
+section.day[data-day="21"] {
+  /* your styles here */
+  .fav-btn {
+    background-color: var(--color-esmae);
+  }
+}
+
+#venue-85,
+#venue-86,
+#venue-89,
+#venue-90,
+#venue-94,
+#venue-98,
+#venue-101,
+#venue-104,
+#venue-109,
+#venue-113,
+#venue-116,
+#venue-117,
+#venue-118 {
+  border-left: 4px solid var(--color-esmae);
+}
+section.day[data-day="23"] {
+  /* your styles here */
+  .fav-btn {
+    background-color: var(--color-fbaup);
+  }
+}
+
+#venue-91,
+#venue-122,
+#venue-123,
+#venue-124,
+#venue-127,
+#venue-128,
+#venue-129,
+#venue-130,
+#venue-133,
+#venue-137,
+#venue-143,
+#venue-148,
+#venue-149,
+#venue-150,
+#venue-152,
+#venue-153 {
+  border-left: 4px solid var(--color-fbaup);
+}
+
+section.venue-conferencista div.sessions article {
+  .fav-btn {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+}
+
+#session-37 .session-author-tag,
+#session-37 .session-type {
+  display: none;
+}
